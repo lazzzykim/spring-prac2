@@ -34,6 +34,5 @@ public class ComponentFilterAppConfigTest {
                     classes = MyExcludeComponent.class
             ))
     static class ComponentFilterAppConfig {
-
     }
 }
