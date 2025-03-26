@@ -2,6 +2,7 @@ package hello.core.singleton;
 
 public class SingletonService {
 
+    // 자기 자신을 static 변수로 선언 (한번만 생성됨)
     private static final SingletonService instance = new SingletonService();
 
     public static SingletonService getInstance() {
@@ -12,6 +13,6 @@ public class SingletonService {
     }
 
     public void logic() {
-        System.out.println("싱글톤 객체 호출");
+        System.out.println("싱글톤 객체 로직 호출");
     }
 }
