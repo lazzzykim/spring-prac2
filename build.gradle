@@ -25,6 +25,7 @@ repositories {
 
 dependencies {
     implementation 'jakarta.inject:jakarta.inject-api:2.0.1'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
@@ -34,6 +35,9 @@ dependencies {
     testAnnotationProcessor 'org.projectlombok:lombok'
 }
 
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs << "-parameters"
+}
 tasks.named('test') {
     useJUnitPlatform()
 }
